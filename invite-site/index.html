@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+  <title>Baby Shower Espacial — Invitación</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Invitación Baby Shower espacial - mobile-first, scroll narrativo" />
+</head>
+<body>
+  <main class="app-shell" role="main">
+    <div class="device">
+      <header class="app-top">
+        <h1 class="brand">Baby Among the Stars</h1>
+      </header>
+
+      <!-- Sticky astronaut that moves with scroll -->
+      <div id="astronaut" class="astronaut" aria-hidden="true">
+        <!-- Inline SVG astronaut -->
+        <img src="assets/astronaut.svg" alt="Astronauta"/>
+      </div>
+
+      <section class="stage" id="hero">
+        <div class="scene moon">
+          <div class="card">
+            <h2>¡Te invitamos al Baby Shower de <span class="name">[Nombre del bebé]</span>!</h2>
+            <p class="meta">📍 <strong>[Dirección del lugar]</strong><br>🕒 <strong>[Fecha y hora]</strong></p>
+            <a class="btn primary" href="https://goo.gl/maps/ejemplo" target="_blank" rel="noopener">Ver ubicación 🚀</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="stage" id="gifts">
+        <div class="scene planet-blue">
+          <div class="card list">
+            <h3>Regalos</h3>
+            <div class="gift" data-id="1">
+              <img src="assets/gift.svg" alt="Regalo 1">
+              <div class="g-info">
+                <div class="g-name">Manta mameluco</div>
+                <a class="btn secondary" href="#" target="_blank">Ver regalo 🎁</a>
+              </div>
+              <button class="status" aria-pressed="false">Disponible</button>
+            </div>
+
+            <div class="gift" data-id="2">
+              <img src="assets/gift.svg" alt="Regalo 2">
+              <div class="g-info">
+                <div class="g-name">Set de baño</div>
+                <a class="btn secondary" href="#" target="_blank">Ver regalo 🎁</a>
+              </div>
+              <button class="status" aria-pressed="false">Disponible</button>
+            </div>
+
+            <p class="hint">Toca "Disponible" para marcar como elegido.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="stage" id="rsvp">
+        <div class="scene moon-surface">
+          <div class="card">
+            <h3>¿Nos acompañás en esta aventura?</h3>
+            <p class="meta">Confirma tu asistencia para preparar todo con amor.</p>
+            <a class="btn primary big" href="https://forms.gle/ejemploForm" target="_blank" rel="noopener">Confirmar asistencia 🌙</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="stage" id="closing">
+        <div class="scene stars">
+          <div class="card">
+            <h3>Gracias por ser parte de este momento</h3>
+            <p class="meta">¡Nos vemos pronto entre las estrellas! 🌟</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="app-foot">© <span id="year"></span> Baby Among the Stars</footer>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
