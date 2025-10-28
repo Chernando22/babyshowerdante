@@ -13,70 +13,40 @@
     <div class="device">
       <header class="app-top">
         <h1 class="brand">Baby Among the Stars</h1>
+        <nav class="mini-nav" aria-label="Navegación">
+          <a class="nav-link" href="/regalos">🎁 Regalos</a>
+        </nav>
       </header>
 
-      <!-- Sticky astronaut that moves with scroll -->
-      <div id="astronaut" class="astronaut" aria-hidden="true">
-        <!-- Inline SVG astronaut -->
-        <img src="assets/astronaut.svg" alt="Astronauta"/>
-      </div>
+      <!-- astronaut removed (static UI preferred) -->
 
-      <section class="stage" id="hero">
-        <div class="scene moon">
-          <div class="card">
-            <h2>¡Te invitamos al Baby Shower de <span class="name">[Nombre del bebé]</span>!</h2>
-            <p class="meta">📍 <strong>[Dirección del lugar]</strong><br>🕒 <strong>[Fecha y hora]</strong></p>
-            <a class="btn primary" href="https://goo.gl/maps/ejemplo" target="_blank" rel="noopener">Ver ubicación 🚀</a>
-          </div>
-        </div>
-      </section>
+      <!-- Solo la grilla de 3 cards debe quedar -->
+        <section class="stage" id="home">
+          <div class="scene moon">
+            <div class="home-grid">
+              <article class="card main-title reveal" style="margin-bottom:18px;">
+                <h2>¡Te invitamos al Baby Shower de <span class="name">Dante</span>!</h2>
+              </article>
+              <article class="card reveal" style="margin-top:0;">
+                <h2>Ubicación y horario</h2>
+                <p class="meta">📍 <strong>[Dirección del lugar]</strong><br>🕒 <strong>[Fecha y hora]</strong></p>
+                <a class="btn primary" href="https://goo.gl/maps/ejemplo" target="_blank" rel="noopener">Ver ubicación 🚀</a>
+              </article>
 
-      <section class="stage" id="gifts">
-        <div class="scene planet-blue">
-          <div class="card list">
-            <h3>Regalos</h3>
-            <div class="gift" data-id="1">
-              <img src="assets/gift.svg" alt="Regalo 1">
-              <div class="g-info">
-                <div class="g-name">Manta mameluco</div>
-                <a class="btn secondary" href="#" target="_blank">Ver regalo 🎁</a>
-              </div>
-              <button class="status" aria-pressed="false">Disponible</button>
+              <article class="card reveal" style="margin-top:0;">
+                <h2>Regalos</h2>
+                <p class="meta">¿Querés ver la lista de regalos disponibles? Tocá el botón para abrir la página de regalos.</p>
+                <a class="btn primary" href="/regalos">🎁 Ir a regalos</a>
+              </article>
+
+              <article class="card reveal" style="margin-top:0;">
+                <h2>Confirmación</h2>
+                <p class="meta">¿Nos acompañás en esta aventura? Confirma tu asistencia para preparar todo con amor.</p>
+                <a class="btn primary big" href="https://forms.gle/ejemploForm" target="_blank" rel="noopener">Confirmar asistencia 🌙</a>
+              </article>
             </div>
-
-            <div class="gift" data-id="2">
-              <img src="assets/gift.svg" alt="Regalo 2">
-              <div class="g-info">
-                <div class="g-name">Set de baño</div>
-                <a class="btn secondary" href="#" target="_blank">Ver regalo 🎁</a>
-              </div>
-              <button class="status" aria-pressed="false">Disponible</button>
-            </div>
-
-            <p class="hint">Toca "Disponible" para marcar como elegido.</p>
           </div>
-        </div>
-      </section>
-
-      <section class="stage" id="rsvp">
-        <div class="scene moon-surface">
-          <div class="card">
-            <h3>¿Nos acompañás en esta aventura?</h3>
-            <p class="meta">Confirma tu asistencia para preparar todo con amor.</p>
-            <a class="btn primary big" href="https://forms.gle/ejemploForm" target="_blank" rel="noopener">Confirmar asistencia 🌙</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="stage" id="closing">
-        <div class="scene stars">
-          <div class="card">
-            <h3>Gracias por ser parte de este momento</h3>
-            <p class="meta">¡Nos vemos pronto entre las estrellas! 🌟</p>
-          </div>
-        </div>
-      </section>
-
+        </section>
       <footer class="app-foot">© <span id="year"></span> Baby Among the Stars</footer>
     </div>
   </main>
