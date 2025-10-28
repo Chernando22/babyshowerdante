@@ -4,11 +4,23 @@
   const yearEl = document.getElementById('year');
   if(yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Gift status toggles (works if .gift elements exist on the page)
-  document.querySelectorAll('.gift-actions .status').forEach(btn => {
+  // Gift status toggles with localStorage persistence
+  document.querySelectorAll('.gift').forEach(gift => {
+    const btn = gift.querySelector('.gift-actions .status');
+    if (!btn) return;
+    const giftId = gift.getAttribute('data-id');
+    // Load state from localStorage
+    const saved = localStorage.getItem('gift-status-' + giftId);
+    if (saved === 'no-disponible') {
+      btn.setAttribute('aria-pressed', 'true');
+    } else {
+      btn.setAttribute('aria-pressed', 'false');
+    }
     btn.addEventListener('click', () => {
       const is = btn.getAttribute('aria-pressed') === 'true';
-      btn.setAttribute('aria-pressed', (!is).toString());
+      const newState = !is;
+      btn.setAttribute('aria-pressed', newState.toString());
+      localStorage.setItem('gift-status-' + giftId, newState ? 'no-disponible' : 'disponible');
       btn.animate([
         { transform: 'scale(1)' },
         { transform: 'scale(1.06)' },
